@@ -39,6 +39,10 @@ export class TableSchemaController {
         } else {
           res.status(500).send();
         }
+      }).catch((error) => {
+        res.status(500).json({
+          error: error.message
+        });
       });
     } catch (error) {
       res.status(500).json({

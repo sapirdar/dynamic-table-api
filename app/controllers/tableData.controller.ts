@@ -39,11 +39,11 @@ export class TableDataController {
         } else {
           res.status(500).json('failed');
         }
+      }).catch((error) => {
+        res.status(500).json({ error: error.message });
       });
     } catch (error) {
-      res.status(500).json({
-        error: error.message
-      });
+      res.status(500).json({ error: error.message });
     }
   };
 
