@@ -7,10 +7,10 @@
   "scripts": {
     "build": "tsc && SET NODE_ENV=development",
     "build-dev": "tsc && SET NODE_ENV=development",
+    "start": "npm run dev",
     "dev": "tsc && ts-node-dev --respawn --transpileOnly ./app/app.ts",
     "test": "tsc && SET NODE_ENV=test node ./build/app.js",
-    "prod": "tsc && SET NODE_ENV=prod node ./build/app.js",
-    "start": "node ./build/app.js"
+    "prod": "tsc && SET NODE_ENV=prod node ./build/app.js"
   },
   "author": "",
   "license": "ISC",

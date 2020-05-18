@@ -1,7 +1,6 @@
 import express, { Router } from 'express';
 import bodyParser from 'body-parser';
-import { TableDataController } from '../controllers/tableData';
-import { Common } from '../common';
+import { TableDataController } from '../controllers/tableData.controller';
 
 const tableDataCtrl = new TableDataController();
 
@@ -16,7 +15,7 @@ tableDataRouter.use((req, res, next) => {
     next();
 });
 
-tableDataRouter.get('/:skip/:limit', tableDataCtrl.get);
+tableDataRouter.get('/:schemaName/:skip/:limit', tableDataCtrl.get);
 tableDataRouter.post('/', tableDataCtrl.create);
 
 export { tableDataRouter }

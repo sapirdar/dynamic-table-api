@@ -13,12 +13,15 @@ export interface ITableSchemaAction {
     type: string;
 }
 
+
+// Column Type - Used for casting
 export enum TableSchemaColumnType {
     text = 'text',
     date = 'date',
     actionButtons = 'actionButtons',
 }
 
+// Action Type - Used for casting
 export enum TableSchemaActionType {
     edit = 'edit',
     delete = 'delete',
